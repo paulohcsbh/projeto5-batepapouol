@@ -2,8 +2,6 @@ let mensagens;
 
 buscarMensagens();
 
-
-
 function buscarMensagens() {
     const promessa = axios.get(
     "https://mock-api.driven.com.br/api/v6/uol/messages"
@@ -38,28 +36,28 @@ function renderizarMensagens() {
         `;
 
     }
-    if(mensagens[i].type === 'private_message'){
+    /*if(mensagens[i].type === 'private_message'){
         ulMsg.innerHTML += `
             <li class="reservada">                
             <span class="hora">(${mensagens[i].time})</span> <span class="nome">${mensagens[i].from }</span> reservadamente para <span class="nome">${mensagens[i].to }</span>: ${mensagens[i].text }
             </li>   
         `;
 
-    }  
+    }*/  
      
   }
   rolar();
 }
 setInterval(buscarMensagens, 3000);
-function rolar(){
+/*function rolar(){
     let scrollar = document.querySelector('.mensagens');
     scrollar.scrollIntoView({block:'end'});    
-}
+}*/
 
 
-
+const apelido = (prompt('Digite seu apelido para entrar na sala:')); 
 function entrar() {   
-    const apelido = (prompt('Digite seu apelido para entrar na sala:'));           
+              
     const nickName = {
       name: apelido      
     };       
@@ -75,7 +73,33 @@ function entrar() {
   function alertaErro(error) {
       if (error.response.status === 400) {
       alert("Apelido já cadastrado!");
-    }
+      window.location.reload()
+      }
+        
+        
   }
-  
+  function enviando(){    
+        const enviarMsg = document.querySelector(".escrevendo").value;
+        
+        const enviar = {
+            from: apelido,
+            to: "Todos",
+            text: enviarMsg,
+            type: "message"
+        };     
+        
+        const promise = axios.post(
+          "https://mock-api.driven.com.br/api/v6/uol/messages",
+          enviar
+        );
+        
+        promise.then(buscarMensagens);
+        promise.catch(erroMsg);              
+      }
+function erroMsg(erro){
+    alert('Você não está logado!');
+    window.location.reload()
+}
+
+      
   

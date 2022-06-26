@@ -52,19 +52,23 @@ li{
     height: 40px;
     background-color: #dcdcdc;
     border-radius: 2px;
-    
+    word-wrap: break-word;
 }
 .msg-comum{
     width: 614px;
-    height: 40px;
+    height: auto;
     background-color: #ffffff;
     border-radius: 2px;
+    padding-bottom: 12px;
+    word-wrap: break-word;
+    
+
 }
 .reservada{
     width: 614px;
     height: 40px;
     background-color: #ffdede;
-    border-radius: 2px;
+    border-radius: 2px;    
     
 }
 
