@@ -49,10 +49,10 @@ function renderizarMensagens() {
   rolar();
 }
 setInterval(buscarMensagens, 3000);
-/*function rolar(){
+function rolar(){
     let scrollar = document.querySelector('.mensagens');
     scrollar.scrollIntoView({block:'end'});    
-}*/
+}
 
 
 const apelido = (prompt('Digite seu apelido para entrar na sala:')); 
@@ -74,11 +74,17 @@ function entrar() {
       if (error.response.status === 400) {
       alert("Apelido já cadastrado!");
       window.location.reload()
-      }
-        
-        
+      }        
   }
-  function enviando(){    
+function estouOn(){
+    const estouAqui = {
+        name: apelido
+    };
+    const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/status", estouAqui);
+}
+setInterval(estouOn, 5000);
+
+function enviando(){    
         const enviarMsg = document.querySelector(".escrevendo").value;
         
         const enviar = {
