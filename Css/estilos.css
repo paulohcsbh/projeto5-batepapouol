@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+body{
+   max-width: 614px;
+    font-family: 'Roboto', sans-serif;  
+    background-color: #f3f3f3;  
+    
+}
+.topo{
+    width: 614px;
+    height: 80px;
+    border: 1px solid #f3f3f3;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom:80px; 
+    
+}
+.logo{
+    width: 75px;
+    height: 53px;
+    margin-left: 22px;
+}
+.icone-top{  
+   font-size: 42.19px;   
+   margin-right: 24.03px;    
+}
+.divisa{    
+    height: 27px;
+    margin: 80px 0 0 0;
+    background-color: #f3f3f3;
+}
+li{
+    margin-bottom: 4px;
+    font-size: 14px;
+    padding-top:  14px;
+    padding-left: 8px;
+}
+.divisa-dois{    
+    height: 4px;
+    margin: 80px 0 0 0;
+    background-color: #f3f3f3;
+}
+.entrou-saiu{
+    width: 614px;
+    height: 40px;
+    background-color: #dcdcdc;
+    border-radius: 2px;
+    
+}
+.msg-comum{
+    width: 614px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+.reservada{
+    width: 614px;
+    height: 40px;
+    background-color: #ffdede;
+    border-radius: 2px;
+    
+}
+
+.enviar-msg{
+    width: 614px;
+    height: 80px;       
+    background-color: #ffffff;
+    border: 1px solid #f3f3f3;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.29);
+    border-radius: 4px;
+    bottom:0;
+    left: 0;
+    position: fixed;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 27px 0 17px; 
+   
+    
+}
+input{
+    width: 145px;
+    height: 30px;
+}
+.botao-enviar{
+    font-size: 26px;
+}
+
+.hora{
+    color: #aaaaaa;
+    font-weight: 700px;
+}
+.nome{
+    font-weight: bold;
+}
+
+
